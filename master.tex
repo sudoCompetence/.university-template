@@ -40,9 +40,11 @@ oneside,
     literate={~} {$\sim$}{1},
 }
 
+
 % BEGIN: Document
 %-------------------------------------------------------------------------------
 \begin{document}
+
 
 % BEGIN: TITLE PAGE
 %-------------------------------------------------------------------------------
@@ -85,6 +87,7 @@ oneside,
     % {\normalsize November 6, 2025 \par}
 }
 
+
 % BEGIN: COPYRIGHT PAGE
 %-------------------------------------------------------------------------------
 \newpage
@@ -114,6 +117,7 @@ information, replace this with your own license (if any)
 
 \noindent \textit{First printed, January 2025 by Tyson M. Koch}
 
+
 % BEGIN: TABLE OF CONTENTS
 %-------------------------------------------------------------------------------
 \pagestyle{empty} % Disable headers and footers for the following pages
@@ -133,7 +137,6 @@ information, replace this with your own license (if any)
 % \cleardoublepage % Start the following content on a new page
 
 
-
 % BEGIN: Workspace
 %-------------------------------------------------------------------------------
 
@@ -141,6 +144,7 @@ information, replace this with your own license (if any)
 % Part: Part I: Part Name
 %-------------------------------------------------------------------------------
 \part{Part I: Part Name}
+
 
 % Chapter: Chapter Name
 %-------------------------------------------------------------------------------
@@ -150,6 +154,7 @@ information, replace this with your own license (if any)
 % Vertical whitespace from the top margin to the start of the text on chapter
 \chapterspacebelow{7.25cm}
 \chapter{Introductions}\index{Introductions}
+
 
 % Section: Section Name
 %-------------------------------------------------------------------------------
@@ -174,12 +179,14 @@ This is a simple paragraph in LaTeX.
 %-------------------------------------------------------------------------------
 \part{Part II: Examples}
 
+
 % Chapter: Chapter Name
 %-------------------------------------------------------------------------------
 \chapterimage{chapter-cover-two.jpg}
 \chapterspaceabove{6.75cm}
 \chapterspacebelow{7.25cm}
 \chapter{Introductions}\index{Introductions}
+
 
 % Section: Introductions
 %-------------------------------------------------------------------------------
@@ -194,6 +201,7 @@ This line starts after a manual line break.
 You can make text \textbf{bold}, \textit{italic}, or \textbf{\textit{both}}. \\
 \noindent
 You can also use \emph{emphasis}, which is usually italicized.
+
 
 % Subsection: Lists
 %-------------------------------------------------------------------------------
@@ -211,6 +219,7 @@ You can also use \emph{emphasis}, which is usually italicized.
     \item Third numbered item
 \end{enumerate}
 
+
 % Subsection: Lists
 %-------------------------------------------------------------------------------
 \subsection{Itemize List}\index{Basics!Itemize}
@@ -227,10 +236,12 @@ You can also use \emph{emphasis}, which is usually italicized.
     \item Third bullet point item
 \end{itemize}
 
+
 % Section: Matricies and Tables
 %-------------------------------------------------------------------------------
 \newpage
 \section{Matrices and Tables}\index{Introductions!Tables}
+
 
 % Subsection: Matrix
 %-------------------------------------------------------------------------------
@@ -242,6 +253,7 @@ You can also use \emph{emphasis}, which is usually italicized.
     4 & 5 & 6
     \end{bmatrix}
 \]
+
 
 % Subsection: Matrix
 %-------------------------------------------------------------------------------
@@ -256,6 +268,7 @@ You can also use \emph{emphasis}, which is usually italicized.
         \end{array}
     \right]
 \]
+
 
 % Subsection: Tables
 %-------------------------------------------------------------------------------
@@ -277,6 +290,7 @@ You can also use \emph{emphasis}, which is usually italicized.
 \end{table}
 Referencing \autoref{tab:exampletableone} in-text using its label.
 
+
 % Section: Figures 
 %-------------------------------------------------------------------------------
 \section{Figures}\index{Introductions!Figures}
@@ -290,9 +304,10 @@ Referencing \autoref{tab:exampletableone} in-text using its label.
 \end{figure}
 Referencing \autoref{fig:example} in-text using its label. \\
 
-\newpage
+
 % Section: Citations 
 %-------------------------------------------------------------------------------
+\newpage
 \section{Citations}\index{Introductions!Citations}
 According to Walpole (2019), "students often had difficulty using \textbf{APA
 style}, especially when it was their first time" (p. 1).
@@ -306,6 +321,7 @@ often had difficulty using APA style". \footnote{Ronald Walpole, “Scientific
 Data,” essay, in Introduction to Statistics and Probability for Engineers and
 Scientists, ed. Raymond Myers, 9th ed. (Boston, MA: Pearson, 2019), p.1}.
 
+
 % Section: Links
 %-------------------------------------------------------------------------------
 \section{Link}\index{Introductions!Links}
@@ -313,6 +329,7 @@ Scientists, ed. Raymond Myers, 9th ed. (Boston, MA: Pearson, 2019), p.1}.
 This is a URL link: \href{https://www.latextemplates.com}{LaTeX Templates}. This
 is an email link: \href{mailto:example@example.com}{example@example.com}. This
 is a monospaced URL link: \url{https://www.LaTeXTemplates.com}.
+
 
 % Section: Code
 %-------------------------------------------------------------------------------
@@ -327,11 +344,13 @@ scanf("%modifier", address);
 
 \lstinputlisting[label=snippet, caption=Coding Snippet, language=C]{source/struct.c}
 
+
 % Section: Basic Mathematics
 %-------------------------------------------------------------------------------
 \section{Basic Mathematics}\index{Introductions!Mathematics}
 Displayed equations appear centered on their own line: \\
 Inline math appears within text, like $a^2 + b^2 = c^2$.
+
 
 % Subsection: Fractions
 %-------------------------------------------------------------------------------
@@ -340,23 +359,27 @@ Inline math appears within text, like $a^2 + b^2 = c^2$.
 \frac{x + 1}{x - 3}
 \]
 
+
 % Subsection: Subscripts & Superscripts 
 %-------------------------------------------------------------------------------
 \subsection{Superscripts \& Subscripts}\index{Mathematics!Exponets}
+
 
 % Subsubsection: Superscripts 
 %-------------------------------------------------------------------------------
 \subsubsection{Superscripts}\index{Exponets!Superscripts}
 $x^2$, $a^{n+1}$, $e^{i\pi} + 1 = 0$.
 
+
 % Subsubsection: Subscripts
 %-------------------------------------------------------------------------------
 \subsubsection{Subscripts}\index{Exponets!Subscripts}
 $x_1$, $a_{n}$, $A_{ij}$.
 
-\newpage
+
 % Section: Propositions 
 %-------------------------------------------------------------------------------
+\newpage
 \section{Propositions}\index{Introductions!Propositions}
 
 \begin{proposition}
@@ -374,6 +397,7 @@ $x_1$, $a_{n}$, $A_{ij}$.
     \end{align}
 \end{proposition}
 
+
 % Subsection: Several Equations
 %-------------------------------------------------------------------------------
 \subsection{Several equations}\index{Propositions!SeveralEquations}
@@ -388,6 +412,7 @@ $x_1$, $a_{n}$, $A_{ij}$.
     \end{align}
 \end{theorem}
 
+
 % Section: Theorems
 %-------------------------------------------------------------------------------
 \section{Theorems}\index{Introductions!Theorems}
@@ -395,6 +420,7 @@ $x_1$, $a_{n}$, $A_{ij}$.
 \begin{theorem}
     A set $\mathcal{D}(G)$ in dense in $L^2(G)$, $|\cdot|_0$. 
 \end{theorem}
+
 
 % Section: Definitions Examples 
 %-------------------------------------------------------------------------------
@@ -409,6 +435,7 @@ $x_1$, $a_{n}$, $A_{ij}$.
         & ||\mathbf{x}+\mathbf{y}||\leq ||\mathbf{x}||+||\mathbf{y}||
     \end{align}
 \end{definition}
+
 
 % Section: Examples 
 %-------------------------------------------------------------------------------
@@ -425,6 +452,7 @@ $x_1$, $a_{n}$, $A_{ij}$.
     $\epsilon\in\mathopen{]}0\,;5/2-\sqrt{2}\mathclose{[}$.
 \end{example}
 
+
 % Subsection: Text Examples 
 %-------------------------------------------------------------------------------
 \section{Text Example}\index{Examples!Text}
@@ -435,15 +463,17 @@ $x_1$, $a_{n}$, $A_{ij}$.
     lobortis eros et massa porta porttitor.
 \end{example}
 
-\newpage
+
 % Section: Exercises Examples 
 %-------------------------------------------------------------------------------
+\newpage
 \section{Exercises}\index{Introductions!Exercises}
 
 \begin{exercise}
     This is a good place to ask a question to test learning progress or further
     cement ideas into students' minds.
 \end{exercise}
+
 
 % Section: Equation Problems 
 %-------------------------------------------------------------------------------
@@ -466,6 +496,7 @@ $x_1$, $a_{n}$, $A_{ij}$.
     a vector space is denoted by $\mathcal{D}(G)$. 
 \end{notation}
 
+
 % Section: Corollaries 
 %-------------------------------------------------------------------------------
 \section{Corollaries}\index{Introductions!Corollaries}
@@ -475,6 +506,7 @@ $x_1$, $a_{n}$, $A_{ij}$.
     however, established properties are easily extended to
     $\mathbb{K}=\mathbb{C}$.
 \end{corollary}
+
 
 % Section: Remarks
 %-------------------------------------------------------------------------------
@@ -486,6 +518,7 @@ $x_1$, $a_{n}$, $A_{ij}$.
     $\mathbb{K}=\mathbb{C}$.
 \end{remark}
 
+
 % Section: Vocabulary 
 %-------------------------------------------------------------------------------
 \section{Vocabulary}\index{Introductions!Vocabulary}
@@ -494,10 +527,12 @@ $x_1$, $a_{n}$, $A_{ij}$.
     Definition of word.
 \end{vocabulary}
 
-\newpage
+
 % Section: Calculus 
 %-------------------------------------------------------------------------------
+\newpage
 \section{Calculus}\index{Mathematics!Calculus}
+
 
 % Subsection: Cases 
 %-------------------------------------------------------------------------------
@@ -510,6 +545,7 @@ $x_1$, $a_{n}$, $A_{ij}$.
         \frac{1}{2}(x_{n/2} + x_{n/2+1}) & \text{if n is even} \\
     \end{cases}
 \end{flalign*} \\
+
 
 % Subsection: Limits & Summations 
 %-------------------------------------------------------------------------------
@@ -526,6 +562,7 @@ $x_1$, $a_{n}$, $A_{ij}$.
 \lim_{x \to 0} \frac{\sin x}{x} = 1
 \] \\
 
+
 % Subsection: Derivatives 
 %-------------------------------------------------------------------------------
 \subsection{Derivatives}\index{Calculus!Derivatives}
@@ -540,6 +577,7 @@ $x_1$, $a_{n}$, $A_{ij}$.
 \frac{d^2}{dx^2} x^3 = 6x
 \] \\
 
+
 % Subsection: Integrals 
 %-------------------------------------------------------------------------------
 \subsection{Integrals}\index{Calculus!Integrals}
@@ -553,6 +591,7 @@ $x_1$, $a_{n}$, $A_{ij}$.
 \[
 \int_{0}^{1} x^2 \, dx = \frac{1}{3}
 \]
+
 
 % Part: Part: End Matter
 %-------------------------------------------------------------------------------

@@ -1,25 +1,24 @@
-%----------------------------------------------------------------------------------------
-%	CLASS CONFIGURATION
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% CLASS CONFIGURATION
+%-------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{LegrandOrangeBook}[2022/01/26 The Legrand Orange Book Class v3.0]
+\ProvidesClass{notes}
 
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}} % Pass through any options to the base class
+% Pass through any options to the base class
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax % Process given options
 
 \LoadClass{book} % Load the base class
 
-%----------------------------------------------------------------------------------------
-%	 REQUIRED PACKAGES AND CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% REQUIRED PACKAGES AND CONFIGURATIONS
+%-------------------------------------------------------------------------------
 
 \usepackage{graphicx} % Required for including pictures
 \graphicspath{{static/}} % Specifies the directory where pictures are stored
 
 \usepackage{float} % Allows more precisely positioning floats e.g. \begin{figure}[H]
-
-\usepackage[usenames, svgnames, table]{xcolor} % Required for defining and using custom colors
 
 \usepackage{calc} % For simpler calculations - used for spacing the index letter headings correctly
 
@@ -29,14 +28,14 @@
 
 \usepackage{etoolbox} % Required for conditional logic and easily changing commands
 
-%----------------------------------------------------------------------------------------
-%	Bibliography
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% Bibliography
+%-------------------------------------------------------------------------------
 \usepackage[resetlabels,labeled]{multibib}
 
-%----------------------------------------------------------------------------------------
-%	MARGINS
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% MARGINS
+%-------------------------------------------------------------------------------
 
 \usepackage{geometry} % Required for adjusting page dimensions and margins
 
@@ -46,15 +45,15 @@
 	inner=3cm, % Inner margin (left on odd pages, right on even or left in oneside mode)
 	outer=3cm, % Outer margin (right on odd pages, left on even or right in oneside mode)
 	headsep=10pt, % Space from the top margin to the baseline of the header
-	headheight=0.5cm, % Header height
+	headheight=0.6cm, % Header height
 	footskip=1.4cm, % Space from the bottom margin to the baseline of the footer
 	columnsep=1cm, % Horizontal space between columns when in two column mode
 	%showframe, % Uncomment to show how the type block is set on the page
 }
 
-%----------------------------------------------------------------------------------------
-%	FONTS
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% FONTS
+%-------------------------------------------------------------------------------
 
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
@@ -65,9 +64,9 @@
 
 \usepackage{microtype} % Improve typography
 
-%----------------------------------------------------------------------------------------
-%	HEADERS AND FOOTERS
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% HEADERS AND FOOTERS
+%-------------------------------------------------------------------------------
 
 \usepackage{fancyhdr} % Required for customizing headers and footers
 \pagestyle{fancy} % Enable the custom headers and footers
@@ -92,9 +91,9 @@
 
 \usepackage{emptypage} % This package removes headers and footers on empty pages between chapters
 
-%----------------------------------------------------------------------------------------
-%	SECTION STYLING
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% SECTION STYLING
+%-------------------------------------------------------------------------------
 
 \setcounter{secnumdepth}{3} % Number sections down to subsubsections, a value of 2 will number to subsections only and 1 to sections only
 
@@ -103,7 +102,7 @@
 	newparttoc, % Required for writing the part toc entry number in a standard way (overriding default LaTeX behavior) so the titletoc package can style it
 ]{titlesec} % Required for modifying sections
 
-%-------------------------------------------
+%-------------------------------------------------------------------------------
 
 % Command to create and output the parts pages
 \newcommand{\outputpartpage}[2]{
@@ -274,9 +273,9 @@
 
 \titlespacing*{\paragraph}{0pt}{0pt}{6pt} % Spacing around section titles, the order is: left, before and after
 
-%----------------------------------------------------------------------------------------
-%	TABLE OF CONTENTS
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% TABLE OF CONTENTS
+%-------------------------------------------------------------------------------
 
 \usepackage{titletoc} % Required for manipulating the table of contents
 
@@ -416,9 +415,9 @@
 	{} % Formatting of numberless sections of this type
 	{~{\normalfont\titlerule*[6pt]{.}}~\thecontentspage} % Formatting of the filler to the right of the heading and the page number
 
-%----------------------------------------------------------------------------------------
-%	INDEX
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% INDEX
+%-------------------------------------------------------------------------------
 
 \usepackage{makeidx} % Required to make an index
 
@@ -431,9 +430,9 @@
 	{}
 	{}
 
-%----------------------------------------------------------------------------------------
-%	 TABLES
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% TABLES
+%-------------------------------------------------------------------------------
 
 \usepackage{array} % Required for manipulating table elements
 
@@ -443,9 +442,9 @@
 
 \usepackage{booktabs} % Required for high quality horizontal rules in tables
 
-%----------------------------------------------------------------------------------------
-%	 LISTS
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% LISTS
+%-------------------------------------------------------------------------------
 
 \usepackage{enumitem} % Required for list customization
 
@@ -461,9 +460,9 @@
 \renewcommand{\labelitemii}{--} % Customize the second level bullet point character
 \renewcommand{\labelitemiii}{$\circ$} % Customize the third level bullet point character
 
-%----------------------------------------------------------------------------------------
-%	LINKS
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% LINKS
+%-------------------------------------------------------------------------------
 
 \usepackage{hyperref}
 
@@ -473,13 +472,13 @@
 	urlcolor=ocre, % Color for \url and \href links
 	linkcolor=black, % Color for \ref/\nameref links
 	citecolor=ocre, % Color for reference citations like \cite{}
-	hyperindex=true, % Adds links from the page numbers in the index to the relevant page
+	% hyperindex=true, % Adds links from the page numbers in the index to the relevant page
 	linktoc=all, % Link from section names and page numbers in the table of contents
 }
 
-%----------------------------------------------------------------------------------------
-%	BOOKMARKS
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% BOOKMARKS
+%-------------------------------------------------------------------------------
 
 \usepackage{bookmark} % Required for customizing PDF bookmarks
 
@@ -496,9 +495,9 @@
 	}
 }
 
-%----------------------------------------------------------------------------------------
-%	TITLE PAGE
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% TITLE PAGE
+%-------------------------------------------------------------------------------
 
 \renewcommand{\titlepage}[2]{
 	\thispagestyle{empty} % Suppress headers and footers on the title page
@@ -511,15 +510,15 @@
 	\newpage
 }
 
-%----------------------------------------------------------------------------------------
-%	THEOREM STYLES
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% THEOREM STYLES
+%-------------------------------------------------------------------------------
 
 \usepackage{amsmath, amsfonts, amssymb, amsthm} % For math equations, theorems, symbols, etc
 
 \renewcommand{\qedsymbol}{$\blacksquare$} % Redefine the QED symbol to be a filled square vs. the default unfilled square
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 % Orange theorem number and optional black title with padding above and below
 \newtheoremstyle{ocrenum} % Theorem style name
@@ -547,7 +546,7 @@
 	{\small\sffamily\bfseries\color{ocre}\thmname{#1}~\thmnumber{\@ifnotempty{#1}{}\@upn{#2}} % Theorem text (e.g. Theorem 2.1)
 	\thmnote{\the\thm@notefont\sffamily\bfseries\color{black}---~#3.\hspace{0.25em}}} % Optional theorem note
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 % Black theorem number and optional black title no padding above and below
 \newtheoremstyle{blacknumex} % Theorem style name
@@ -561,7 +560,7 @@
 	{\small\sffamily\bfseries{\raisebox{1.25pt}{\tiny\ensuremath{\blacksquare}}}~\thmname{#1}~\thmnumber{\@ifnotempty{#1}{}\@upn{#2}} % Theorem text (e.g. Theorem 2.1)
 	\thmnote{\the\thm@notefont\sffamily\bfseries---~#3.\hspace{0.25em}}} % Optional theorem note
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 % Black theorem number and optional black title padding above and below
 \newtheoremstyle{blacknumbox} % Theorem style name
@@ -575,7 +574,7 @@
 	{\small\sffamily\bfseries\thmname{#1}~\thmnumber{\@ifnotempty{#1}{}\@upn{#2}} % Theorem text (e.g. Theorem 2.1)
 	\thmnote{\the\thm@notefont\sffamily\bfseries---~#3.\hspace{0.25em}}} % Optional theorem note
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 % Set the theorem style for each type of theorem-like environment by placing it under the theorem style you would like to use for it
 
@@ -600,9 +599,9 @@
 \newtheorem{definitionT}{Definition}[chapter] % Definitions, the first argument is the theorem name, the second the theorem title used before the number and the third optional argument is whether to number under chapters (e.g. 2.1) or sections (e.g. 2.1.1)
 \newtheorem{corollaryT}{Corollary}[chapter] % Corollaries, the first argument is the theorem name, the second the theorem title used before the number and the third optional argument is whether to number under chapters (e.g. 2.1) or sections (e.g. 2.1.1)
 
-%----------------------------------------------------------------------------------------
-%	COLORED THEOREM BOXES
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% COLORED THEOREM BOXES
+%-------------------------------------------------------------------------------
 
 \RequirePackage[framemethod=default]{mdframed} % Required for creating colored boxes used for theorems, definitions, exercises and corollaries
 
@@ -683,9 +682,9 @@
 \newenvironment{example}{\begin{exampleT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{exampleT}}	
 \newenvironment{corollary}{\begin{cBox}\begin{corollaryT}}{\end{corollaryT}\end{cBox}}
 
-%----------------------------------------------------------------------------------------
-%	REMARK ENVIRONMENT
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% REMARK ENVIRONMENT
+%-------------------------------------------------------------------------------
 
 \newenvironment{remark}{%
 	\par\small % Reduce font size for remarks
@@ -700,9 +699,9 @@
 	\end{adjustwidth}
 }
 
-%----------------------------------------------------------------------------------------
-%	 LOAD PACKAGES THAT CLASH WITH OTHER PACKAGES
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% LOAD PACKAGES THAT CLASH WITH OTHER PACKAGES
+%-------------------------------------------------------------------------------
 
 \usepackage{listings} % Include the source code of any programming language
 
@@ -712,9 +711,9 @@
 
 \usepackage{amsmath} % Mathematical packages 
 
-%----------------------------------------------------------------------------------------
-%	CODE
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% CODE
+%-------------------------------------------------------------------------------
 % Required for coding snippets
 \usepackage{listings}
 \usepackage{xcolor}
@@ -741,14 +740,14 @@
   tabsize=3
 }
 
-%----------------------------------------------------------------------------------------
-%> Custom environments and commands %
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% Custom environments and commands %
+%-------------------------------------------------------------------------------
 
 % Beter center environment
 \newenvironment{tightcenter}{%
-    \setlength\topsep{0pt}
-    \setlength\parskip{0pt}
+    % \setlength\topsep{0pt}
+    % \setlength\parskip{0pt}
     \begin{center}
     }{%
     \end{center}
